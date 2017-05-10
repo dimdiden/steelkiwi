@@ -1,8 +1,6 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 
-# Create your models here.
-
 
 class Category(models.Model):
     name = models.CharField(max_length=30)
@@ -22,8 +20,8 @@ class Product(models.Model):
     slug = models.SlugField(max_length=30)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    created_at = models.DateField()
-    modified_at = models.DateField()
+    created_at = models.DateField(auto_now_add=True)
+    modified_at = models.DateField(auto_now=True)
 
     def __str__(self):
         return self.name
