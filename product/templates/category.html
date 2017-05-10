@@ -1,0 +1,17 @@
+{% extends "header.html" %}
+{% block content %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+   </tr>
+    {% for object in object_list %}
+        <tr>
+            <td><a href="{{ object.get_absolute_url }}">{{object.name}}</a></td>
+            <td>{{object.description}}</td>
+            <td>{{object.price}}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

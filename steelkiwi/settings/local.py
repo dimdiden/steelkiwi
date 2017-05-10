@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'product',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,7 @@ WSGI_APPLICATION = 'steelkiwi.wsgi.application'
 #     }
 # }
 
+# http://stackoverflow.com/questions/19189813/setting-django-up-to-use-mysql
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
