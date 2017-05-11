@@ -13,7 +13,7 @@ class HomeViewTests(TestCase):
 
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Get list of products for 24 hours")
+        self.assertContains(response, "Get list of products for the last 24 hours")
 
     def test_index_view_with_not_logged_user(self):
         """
@@ -23,4 +23,4 @@ class HomeViewTests(TestCase):
 
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
-        self.assertNotContains(response, "Get list of products for 24 hours")
+        self.assertNotContains(response, "Get list of products for the last 24 hours")
