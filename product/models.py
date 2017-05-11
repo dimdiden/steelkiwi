@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 
 class Category(models.Model):
     name = models.CharField(max_length=30)
-    slug = models.SlugField(max_length=30)
+    slug = models.SlugField(max_length=30, unique=True)
     description = models.TextField()
 
     def __str__(self):
@@ -17,7 +17,7 @@ class Category(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=30)
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
-    slug = models.SlugField(max_length=30)
+    slug = models.SlugField(max_length=30,unique=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     created_at = models.DateField(auto_now_add=True)
