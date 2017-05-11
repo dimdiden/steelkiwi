@@ -13,13 +13,15 @@
 > . venv/bin/activate
 
 5. Change folder and install requirements
-> cd steelkiwi-master/
-> pip install -r requirements.txt
+> cd steelkiwi-master/ && pip install -r requirements.txt
 
 6. Create mysql database
 > CREATE DATABASE steelkiwi CHARACTER SET utf8;
+
 > CREATE USER '<your user>'@'localhost' IDENTIFIED BY '<your password>';
+
 > GRANT ALL ON steelkiwi.* TO '<your user>'@'localhost';
+
 > flush privileges;
 
 7. Change user in settings file
