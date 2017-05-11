@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView
 from .models import Category, Product
 
 
+# Display list of Categories
 class CategoryListView(ListView):
     model = Category
     template_name = "home.html"
@@ -14,12 +15,14 @@ class CategoryListView(ListView):
         return context
 
 
+# Display list of Products by specific Category
 class ProductListView(ListView):
     model = Product
     template_name = "category.html"
 
     def get_queryset(self):
-        return Product.objects.all().filter(category=Category.objects.get(slug=self.kwargs['category_slug']))
+        return Product.objects.all().filter(
+            category=Category.objects.get(slug=self.kwargs['category_slug']))
 
     def get_context_data(self, **kwargs):
         context = super(ProductListView, self).get_context_data(**kwargs)
@@ -27,6 +30,7 @@ class ProductListView(ListView):
         return context
 
 
+# Display detailed page for the specific Product
 class ProductDetailView(DetailView):
     model = Product
     template_name = "product.html"
@@ -38,6 +42,7 @@ class ProductDetailView(DetailView):
         return context
 
 
+# Display list of Products for the last 24 hours
 class Product24ListView(ListView):
     model = Product
     template_name = "category.html"

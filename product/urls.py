@@ -10,6 +10,7 @@ from .views import (
 )
 
 urlpatterns = [
+    # If url is /, it will be redirected to products/
     url(r'^$',
         RedirectView.as_view(pattern_name='home')),
     url(r'^products/$',
