@@ -1,0 +1,72 @@
+[
+{
+    "model": "product.category",
+    "pk": 1,
+    "fields": {
+        "name": "Laptops",
+        "slug": "laptops",
+        "description": "Much more than just a computer, a laptop is your entertainment, social, business, and education hub. Whatever you want to use your laptop for, we can help you find the right one."
+    }
+},
+{
+    "model": "product.category",
+    "pk": 2,
+    "fields": {
+        "name": "Smartphones",
+        "slug": "smartphones",
+        "description": "A smartphone is a mobile phone (also known as cell phones or mobiles) with an advanced mobile operating system that combines features of a personal computer operating system with other features useful for mobile or handheld use."
+    }
+},
+{
+    "model": "product.product",
+    "pk": 1,
+    "fields": {
+        "name": "DELL Inspiron 15 7000 15.6\" Ga",
+        "category": 1,
+        "slug": "dell-inspiron-15-7000-156-ga",
+        "description": "Extra-stable performance with thermal cooling. Backlit keyboard helps you play and work with precision, even in the dark. Easy upgrades with a huge service bay door. Upgrade your memory up to 32 GB for super-fast computing. Games look beautiful on a crisp Full HD screen",
+        "price": "1149.99",
+        "created_at": "2017-05-11",
+        "modified_at": "2017-05-11"
+    }
+},
+{
+    "model": "product.product",
+    "pk": 2,
+    "fields": {
+        "name": "APPLE MacBook Pro 13\" with Ret",
+        "category": 1,
+        "slug": "apple-macbook-pro-13-ret",
+        "description": "Powerful 5th generation Intel\u00ae Core\u00ae processing delivers fast and reliable computing.  Beautifully detailed Retina display is bright, clear hugely detailed. The New Force Touch trackpad makes navigation faster and more intuitive than ever. OS X Yosemite is easy to use and makes working, creating and researching easy",
+        "price": "1249.00",
+        "created_at": "2017-05-11",
+        "modified_at": "2017-05-11"
+    }
+},
+{
+    "model": "product.product",
+    "pk": 3,
+    "fields": {
+        "name": "Lenovo P2",
+        "category": 2,
+        "slug": "lenovo-p2",
+        "description": "If you\u2019re looking for a high-spec budget phone, you\u2019d be hard pressed to do better than the Lenovo P2. \r\nIt features everything you\u2019d expect to see in a mid-range phone but we\u2019re continually surprised by how cheap it is.\r\nThe real standout feature here though is the battery life with the Lenovo P2 comfortably able to last two days on a single charge - a feat which is almost unheard of in today's smartphone market.",
+        "price": "240.12",
+        "created_at": "2017-05-11",
+        "modified_at": "2017-05-11"
+    }
+},
+{
+    "model": "product.product",
+    "pk": 4,
+    "fields": {
+        "name": "HTC 10",
+        "category": 2,
+        "slug": "htc-10",
+        "description": "HTC didn't really ignite the smartphone game with the One M9, but with the new HTC 10 the brand has made a beautiful phone that's 'sculpted by light', added in a genuinely impressive camera and improved the battery life. \r\nIt's since added the HTC 10 Evo to the mix, but it's nowhere near as impressive as the original.",
+        "price": "375.66",
+        "created_at": "2017-05-11",
+        "modified_at": "2017-05-11"
+    }
+}
+]
