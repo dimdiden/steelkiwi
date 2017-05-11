@@ -18,14 +18,16 @@
 6. Create mysql database
 > CREATE DATABASE steelkiwi CHARACTER SET utf8;
 
-> CREATE USER '<your user>'@'localhost' IDENTIFIED BY '<your password>';
+> CREATE USER 'YOUR_USER'@'localhost' IDENTIFIED BY 'YOUR_PASSWORD';
 
-> GRANT ALL ON steelkiwi.* TO '<your user>'@'localhost';
+> GRANT ALL ON steelkiwi.* TO 'YOUR_USER'@'localhost';
 
 > flush privileges;
 
-7. Change user in settings file
-> sed -i s/ded/<your user>/g steelkiwi/settings/local.py
+7. Change user and password in settings file
+> sed -i s/ded/YOUR_USER/g steelkiwi/settings/local.py
+
+> sed -i s/dedpassword/YOUR_PASSWORD/g steelkiwi/settings/local.py
 
 8. Perform migrations
 > ./manage.py migrate
