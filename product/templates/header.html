@@ -9,6 +9,15 @@
 <body>
     <div class="container">
         <div class="row">
+            <div class="col-md-8">
+                <a href="/">Home</a>
+            </div>
+            <div class="col-md-4">
+                {% block last24 %}                    
+                {% endblock last24 %}
+            </div>
+        </div>
+        <div class="row">
             <div class="col-xl-4">
                 {% block content %}
                 {% endblock content %}
