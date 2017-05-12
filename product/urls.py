@@ -6,7 +6,7 @@ from .views import (
     CategoryListView,
     ProductListView,
     ProductDetailView,
-    Product24ListView
+#    Product24ListView
 )
 
 urlpatterns = [
@@ -15,8 +15,11 @@ urlpatterns = [
         RedirectView.as_view(pattern_name='home')),
     url(r'^products/$',
         CategoryListView.as_view(), name='home'),
-    url(r'^last_24_hours/$',
-        Product24ListView.as_view(), name='product_24'),
+
+    # for accesing the page with products for the 24 hours
+    url(r'^(?P<extra>[\w_]+)/$',
+        ProductListView.as_view(), name='product_24'),
+    
     url(r'^products/(?P<category_slug>[\w-]+)/$',
         ProductListView.as_view(), name='category'),
     url(r'^products/(?P<category_slug>[\w-]+)/(?P<product_slug>[\w-]+)$',
