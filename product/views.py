@@ -15,7 +15,7 @@ class CategoryListView(ListView):
         return context
 
 
-# Display list of Products by specific Category
+# Display list of Products
 class ProductListView(ListView):
     model = Product
     template_name = "category.html"
