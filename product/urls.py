@@ -6,7 +6,6 @@ from .views import (
     CategoryListView,
     ProductListView,
     ProductDetailView,
-#    Product24ListView
 )
 
 urlpatterns = [
@@ -19,7 +18,7 @@ urlpatterns = [
     # for accesing the page with products for the 24 hours
     url(r'^(?P<extra>[\w_]+)/$',
         ProductListView.as_view(), name='product_24'),
-    
+
     url(r'^products/(?P<category_slug>[\w-]+)/$',
         ProductListView.as_view(), name='category'),
     url(r'^products/(?P<category_slug>[\w-]+)/(?P<product_slug>[\w-]+)$',
